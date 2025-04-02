@@ -4,13 +4,10 @@ require 'bots/the_bully'
 require 'bots/the_chicken'
 require 'bots/the_thinker'
 require 'bots/the_whinger'
-require 'bots/hackling'
 require 'bots/self_destructo'
 require 'bots/spray_and_pray'
 require 'bots/death_roomba'
-require 'bots/the_cheat'
 require 'bots/speedy'
-#require 'bots/the_troublemaker'
 
 module BattleBots
   module Players
@@ -19,14 +16,11 @@ module BattleBots
       [
         Proxy.new(self, TheCloser),
         Proxy.new(self, TheBully),
-        Proxy.new(self, Hackling),
         Proxy.new(self, DeathRoomba),
         Proxy.new(self, TheWhinger),
         Proxy.new(self, TheThinker),
         Proxy.new(self, SprayAndPray),
         Proxy.new(self, Speedy),
-        #Proxy.new(self, TheTroublemaker),
-        #Proxy.new(self, TheCheat),
         Proxy.new(self, TheChicken)
       ].shuffle
     end
