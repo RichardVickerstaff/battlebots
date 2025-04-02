@@ -56,7 +56,6 @@ module BattleBots
     def display_winner(proxy)
       @font.draw("WINNER!", 200, 300, 0, 1.0, 1.0, 0xffffff00)
       unless @winner_played
-        Gosu::Sample.new(self, "media/you-win.mp3").play
         @winner_played = true
       end
     end
